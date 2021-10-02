@@ -1,0 +1,14 @@
+#load "graphics.cma" ;;
+open Graphics ;;
+open_graph " 1200 x800 " ;;
+
+let test (x,y) (z,t) =
+    clear_graph ();
+    set_color red;
+    moveto x y ;
+    lineto z t ;
+    set_color blue ;
+    rmoveto x y ;                       
+    rlineto z t ;;                      
+test (50,50) (50,150) ;;
+test (100,100) (200,100) ;;
